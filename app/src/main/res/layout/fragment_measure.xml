@@ -1,0 +1,928 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- tools:showIn="@layout/activity_main"
+    tools:context=".MainActivityFragment"
+    android:id="@+id/measure"-->
+
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="308dp"
+        android:layout_height="308dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginStart="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout10"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_alignBottom="@+id/surfaceView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="表示ＣＨ"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_above="@+id/disChtextView"
+            android:layout_toRightOf="@+id/disChMbutton"
+            android:layout_toEndOf="@+id/disChMbutton" />
+
+        <Button
+            android:id="@+id/disChPbutton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/disChtextView"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@+id/disChtextView"
+            android:layout_toRightOf="@+id/disChtextView"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/PwMbutton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView8"
+            android:layout_marginLeft="39dp"
+            android:layout_marginStart="39dp"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/PwPbutton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/PwMbutton"
+            android:layout_toEndOf="@+id/PwMbutton"
+            android:layout_toRightOf="@+id/PwMbutton"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/PH1Mbutton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView12"
+            android:layout_toLeftOf="@+id/PH1Pbutton"
+            android:layout_toStartOf="@+id/PH1Pbutton"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/PH1Pbutton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/PwPbutton"
+            android:layout_alignStart="@+id/PwPbutton"
+            android:layout_alignTop="@+id/PH1Mbutton"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/PH2Mbutton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/PH1Mbutton"
+            android:layout_alignStart="@+id/PH1Mbutton"
+            android:layout_below="@+id/textView13"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/PH2Pbutton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/PH1Pbutton"
+            android:layout_alignStart="@+id/PH1Pbutton"
+            android:layout_alignTop="@+id/PH2Mbutton"
+            android:text="+" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/PwMbutton"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/PwMbutton"
+            android:text="Pｗ"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PwMbutton"
+            android:layout_toLeftOf="@+id/PwPbutton"
+            android:layout_toStartOf="@+id/PwPbutton"
+            android:text="θ１"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView8"
+            android:layout_alignStart="@+id/textView8"
+            android:layout_below="@+id/PH1Mbutton"
+            android:text="θ２"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/disChtextView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:layout_alignTop="@+id/disChMbutton"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@+id/PH2Mbutton"
+            android:layout_toRightOf="@+id/PH2Mbutton"
+            android:background="@drawable/simple_frame"
+            android:focusable="true"
+            android:gravity="center"
+            android:singleLine="false"
+            android:textIsSelectable="false"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/disChMbutton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_below="@+id/PH2Mbutton"
+            android:layout_alignRight="@+id/textView13"
+            android:layout_alignEnd="@+id/textView13"
+            android:layout_marginTop="28dp" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        style="@android:style/Widget.DeviceDefault.Light.ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/surfaceView"
+        android:layout_marginTop="10dp"
+        android:fadeScrollbars="false"
+        android:fadingEdge="none"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="horizontal|vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/setting_frame"
+        tools:layout_editor_absoluteX="125dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:fadeScrollbars="false"
+            android:orientation="vertical"
+            android:scrollbarAlwaysDrawVerticalTrack="true">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="416dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/surfaceView"
+                android:layout_marginTop="10dp"
+                android:scrollbarAlwaysDrawHorizontalTrack="false"
+                android:scrollbarAlwaysDrawVerticalTrack="false">
+
+                <Button
+                    android:id="@+id/phaseEnterButton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/phaseEditText"
+                    android:layout_toEndOf="@+id/phaseTextview"
+                    android:layout_toRightOf="@+id/phaseTextview"
+                    android:text="OK" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/textView3"
+                    android:layout_alignRight="@+id/textView3"
+                    android:layout_below="@+id/hpMbutton"
+                    android:layout_marginTop="21dp"
+                    android:text="測定ＣＨ数"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <Button
+                    android:id="@+id/measureChMbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/measureChPbutton"
+                    android:layout_alignLeft="@+id/hpMbutton"
+                    android:layout_alignStart="@+id/hpMbutton"
+                    android:layout_alignTop="@+id/phasePbutton"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/measureChtextView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+
+                    android:layout_alignTop="@+id/measureChMbutton"
+                    android:layout_toEndOf="@+id/measureChMbutton"
+                    android:layout_toRightOf="@+id/measureChMbutton"
+                    android:background="@drawable/simple_frame"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="false"
+                    android:textIsSelectable="false"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/measureChPbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/phasePbutton"
+                    android:layout_toLeftOf="@+id/hpPbutton"
+                    android:layout_toStartOf="@+id/hpPbutton"
+                    android:text="+" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/setChtextView"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/setChtextView"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="設定ＣＨ"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <Button
+                    android:id="@+id/measureButton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginStart="29dp"
+                    android:text="検査開始"
+
+                    />
+
+                <Button
+                    android:id="@+id/dfrqPbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dfrqMbutton"
+                    android:layout_alignBottom="@+id/dfrqMbutton"
+                    android:layout_toEndOf="@+id/dfrqText"
+                    android:layout_toRightOf="@+id/dfrqText"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/dfrqMbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/measureButton"
+                    android:layout_alignStart="@+id/measureButton"
+                    android:layout_below="@+id/setChMbutton"
+                    android:layout_marginTop="23dp"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/gainMbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/dfrqText"
+                    android:layout_centerHorizontal="true"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/gainPbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/dfrqText"
+                    android:layout_toEndOf="@+id/gainText"
+                    android:layout_toRightOf="@+id/gainText"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/lpPbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/lpMbutton"
+                    android:layout_toRightOf="@+id/textView"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/phasePbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/phaseTextview"
+                    android:layout_alignEnd="@+id/dfreqSpinner"
+                    android:layout_alignRight="@+id/dfreqSpinner"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/lpMbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/dfrqMbutton"
+                    android:layout_alignStart="@+id/dfrqMbutton"
+                    android:layout_below="@+id/textView"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/lpfText"
+                    android:layout_width="100dp"
+                    android:layout_height="40sp"
+                    android:layout_alignBottom="@+id/hpfText"
+                    android:layout_alignTop="@+id/hpfText"
+                    android:layout_alignWithParentIfMissing="false"
+                    android:layout_toEndOf="@+id/lpMbutton"
+                    android:layout_toRightOf="@+id/lpMbutton"
+                    android:background="@drawable/simple_frame"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/hpPbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/hpMbutton"
+                    android:layout_toEndOf="@+id/hpfText"
+                    android:layout_toRightOf="@+id/hpfText"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/hpMbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/lpPbutton"
+                    android:layout_toLeftOf="@+id/hpfText"
+                    android:layout_toStartOf="@+id/hpfText"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/dfrqText"
+                    android:layout_width="100dp"
+                    android:layout_height="40sp"
+
+                    android:layout_above="@+id/dfrqEditText"
+                    android:layout_alignTop="@+id/dfrqPbutton"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toEndOf="@+id/dfrqMbutton"
+                    android:layout_toRightOf="@+id/dfrqMbutton"
+                    android:background="@drawable/simple_frame"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:textIsSelectable="false"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView22"
+                    android:layout_alignBottom="@+id/textView22"
+                    android:layout_marginEnd="31dp"
+                    android:layout_marginRight="31dp"
+                    android:layout_toLeftOf="@+id/lpPbutton"
+                    android:layout_toStartOf="@+id/lpPbutton"
+                    android:text="位相"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/gainText"
+                    android:layout_width="100dp"
+                    android:layout_height="40sp"
+                    android:layout_alignBottom="@+id/gainPbutton"
+                    android:layout_alignTop="@+id/dfrqText"
+                    android:layout_toEndOf="@+id/gainMbutton"
+                    android:layout_toRightOf="@+id/gainMbutton"
+                    android:background="@drawable/simple_frame"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:textSize="20sp">
+
+                    <requestFocus />
+                </TextView>
+
+                <EditText
+                    android:id="@+id/gainEditText"
+                    android:layout_width="100dp"
+
+                    android:layout_height="40sp"
+                    android:layout_alignBottom="@+id/dfrqEnterButton"
+                    android:layout_toEndOf="@+id/gainMbutton"
+                    android:layout_toRightOf="@+id/gainMbutton"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="4" />
+
+                <TextView
+                    android:id="@+id/hpfText"
+                    android:layout_width="100dp"
+                    android:layout_height="40sp"
+                    android:layout_alignBottom="@+id/hpPbutton"
+                    android:layout_alignTop="@+id/hpPbutton"
+                    android:layout_alignWithParentIfMissing="false"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toEndOf="@+id/gainMbutton"
+                    android:layout_toRightOf="@+id/gainMbutton"
+                    android:background="@drawable/simple_frame"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/textView4"
+                    android:layout_alignRight="@+id/textView4"
+                    android:layout_below="@+id/dfreqSpinner"
+                    android:layout_marginTop="10dp"
+                    android:text="LPフィルタ設定"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/lpPbutton"
+                    android:layout_toEndOf="@+id/hpMbutton"
+                    android:layout_toRightOf="@+id/hpMbutton"
+                    android:text="HPフィルタ設定"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/phaseTextview"
+                    android:layout_width="100dp"
+                    android:layout_height="40sp"
+
+                    android:layout_alignBottom="@+id/phaseMbutton"
+                    android:layout_toLeftOf="@+id/phasePbutton"
+                    android:layout_toStartOf="@+id/phasePbutton"
+                    android:background="@drawable/simple_frame"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:textIsSelectable="false"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/gainMbutton"
+                    android:layout_toEndOf="@+id/gainMbutton"
+                    android:layout_toRightOf="@+id/gainMbutton"
+                    android:text="GAIN設定"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/dfrqText"
+                    android:layout_toEndOf="@+id/dfrqMbutton"
+                    android:layout_toRightOf="@+id/dfrqMbutton"
+                    android:text="ドライブ周波数"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <EditText
+                    android:id="@+id/dfrqEditText"
+                    android:layout_width="100dp"
+                    android:layout_height="40sp"
+                    android:layout_below="@+id/dfrqMbutton"
+                    android:layout_toEndOf="@+id/dfrqMbutton"
+                    android:layout_toRightOf="@+id/dfrqMbutton"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5" />
+
+                <Button
+                    android:id="@+id/dfrqEnterButton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dfrqText"
+                    android:layout_toEndOf="@+id/dfreqSpinner"
+                    android:layout_toRightOf="@+id/dfreqSpinner"
+                    android:text="OK" />
+
+                <Button
+                    android:id="@+id/setChPbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/setChtextView"
+                    android:layout_alignBottom="@+id/setChtextView"
+                    android:layout_toEndOf="@+id/setChtextView"
+                    android:layout_toRightOf="@+id/setChtextView"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/setChMbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView27"
+                    android:layout_toLeftOf="@+id/textView3"
+                    android:layout_toStartOf="@+id/textView3"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/setChtextView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+
+                    android:layout_alignBottom="@+id/setChMbutton"
+                    android:layout_toEndOf="@+id/setChMbutton"
+                    android:layout_toRightOf="@+id/setChMbutton"
+                    android:background="@drawable/simple_frame"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:textIsSelectable="false"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/dfreqSpinner"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/dfrqPbutton"
+                    android:layout_toEndOf="@+id/lpfText"
+                    android:layout_toRightOf="@+id/lpfText" />
+
+                <Button
+                    android:id="@+id/gainEnterButton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dfrqEditText"
+                    android:layout_alignBottom="@+id/dfrqEditText"
+                    android:layout_toEndOf="@+id/gainText"
+                    android:layout_toRightOf="@+id/gainText"
+                    android:text="OK" />
+
+                <Button
+                    android:id="@+id/phaseMbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView38"
+                    android:layout_toLeftOf="@+id/phaseTextview"
+                    android:layout_toStartOf="@+id/phaseTextview"
+                    android:text="-" />
+
+                <EditText
+                    android:id="@+id/phaseEditText"
+                    android:layout_width="100dp"
+                    android:layout_height="40sp"
+                    android:layout_below="@+id/measureChtextView"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/phaseMbutton"
+                    android:layout_toRightOf="@+id/phaseMbutton"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:selectAllOnFocus="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <Button
+
+                    android:id="@+id/autoFilterButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_toEndOf="@+id/freqSweepButton"
+                    android:layout_toRightOf="@+id/freqSweepButton"
+                    android:layout_weight="1"
+                    android:text="自動フィルタ設定" />
+
+                <Button
+                    android:id="@+id/freqSweepButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:text="周波数掃引モード" />
+
+                <RadioGroup
+                    android:id="@+id/movemode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_toEndOf="@+id/autoFilterButton"
+                    android:layout_toRightOf="@+id/autoFilterButton"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <RadioButton
+                        android:id="@+id/slideSel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignBaseline="@+id/autoFilterButton"
+                        android:layout_alignBottom="@+id/autoFilterButton"
+                        android:layout_toEndOf="@+id/movemode"
+                        android:layout_toRightOf="@+id/autoFilterButton"
+                        android:checked="false"
+                        android:text="スライド" />
+
+                    <RadioButton
+                        android:id="@+id/rollSel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignBottom="@+id/relativeLayout11"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="0dp"
+                        android:checked="true"
+                        android:text="回転" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <Button
+                    android:id="@+id/agcButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/agsButton"
+                    android:layout_toRightOf="@+id/agsButton"
+                    android:text="LOC" />
+
+                <Button
+                    android:id="@+id/agsButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:singleLine="true"
+                    android:text="自動GAIN設定" />
+
+                <Button
+                    android:id="@+id/agcSelButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/agcButton"
+                    android:layout_toRightOf="@+id/agcButton"
+                    android:text="LOC校正モード" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                android:layout_marginTop="5dp">
+
+                <Button
+                    android:id="@+id/thresholdEnterButton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OK"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/thresholdTextview"
+                    android:layout_toEndOf="@+id/thresholdTextview" />
+
+                <Button
+                    android:id="@+id/blankingEnterButton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/blankingEditText"
+                    android:layout_alignBottom="@+id/blankingEditText"
+                    android:layout_toEndOf="@+id/blankingEditText"
+                    android:layout_toRightOf="@+id/blankingEditText"
+                    android:text="OK" />
+
+                <EditText
+                    android:id="@+id/thresholdEditText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:autoText="false"
+                    android:capitalize="none"
+                    android:gravity="fill_horizontal"
+                    android:scrollHorizontally="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    app:layout_constraintHorizontal_bias="0.109"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:layout_constraintLeft_creator="1"
+                    tools:layout_constraintRight_creator="1"
+                    tools:layout_constraintTop_creator="1"
+                    tools:layout_editor_absoluteY="101dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/thresholdEnterButton"
+                    android:layout_toStartOf="@+id/thresholdEnterButton" />
+
+                <TextView
+                    android:id="@+id/thresholdTextview"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+
+                    android:layout_alignBottom="@+id/blankingMbutton"
+                    android:layout_toEndOf="@+id/thresholdMbutton"
+                    android:layout_toRightOf="@+id/thresholdMbutton"
+                    android:background="@drawable/simple_frame"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:textIsSelectable="false"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="324dp"
+                    tools:layout_editor_absoluteY="55dp" />
+
+                <TextView
+                    android:id="@+id/blankingTextview"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+
+                    android:layout_below="@+id/textView23"
+                    android:layout_toEndOf="@+id/blankingMbutton"
+                    android:layout_toRightOf="@+id/blankingMbutton"
+                    android:background="@drawable/simple_frame"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:textIsSelectable="false"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="48dp"
+                    tools:layout_editor_absoluteY="50dp" />
+
+                <Button
+                    android:id="@+id/thresholdPbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/thresholdTextview"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_toEndOf="@+id/thresholdEditText"
+                    android:layout_toRightOf="@+id/thresholdEditText"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/blankingPbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/blankingTextview"
+                    android:layout_alignBottom="@+id/blankingTextview"
+                    android:layout_toEndOf="@+id/blankingTextview"
+                    android:layout_toRightOf="@+id/blankingTextview"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/thresholdMbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:layout_alignTop="@+id/thresholdTextview"
+                    android:layout_toRightOf="@+id/textView23"
+                    android:layout_toEndOf="@+id/textView23" />
+
+                <Button
+                    android:id="@+id/blankingMbutton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView23"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginStart="32dp"
+                    android:text="ブランキング時間（サンプル数）"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:layout_editor_absoluteY="33dp" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/phasePbutton"
+                    android:layout_alignLeft="@+id/thresholdEditText"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/thresholdEditText"
+                    android:text="スレッショルド"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    tools:layout_editor_absoluteX="343dp"
+                    tools:layout_editor_absoluteY="34dp" />
+
+                <EditText
+                    android:id="@+id/blankingEditText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/blankingMbutton"
+                    android:layout_toRightOf="@+id/blankingMbutton"
+                    android:autoText="false"
+                    android:capitalize="none"
+                    android:gravity="fill_horizontal"
+                    android:scrollHorizontally="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    app:layout_constraintHorizontal_bias="0.109"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:focusable="false"
+                    tools:layout_constraintLeft_creator="1"
+                    tools:layout_constraintRight_creator="1"
+                    tools:layout_constraintTop_creator="1"
+                    tools:layout_editor_absoluteY="101dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+
